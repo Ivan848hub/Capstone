@@ -10,6 +10,9 @@
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- this is the start of content -->
@@ -18,13 +21,36 @@
     </h1>
      <img src="fortune.jpeg" width="300" height="300" alt="fortune teller image">
 
-    <form name="fortuneTeller" id="fortuneTeller" action="fortune.html">
+    <form name="fortuneTeller" id="fortuneTeller" action="Fortuneteller.html">
       <label for="namefield">Name:</label>
       <input type="text" id="namefield" name="name" placeholder="your name" required>
       <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br><br>
+        
+        <label for="updates">Receive updates:</label>
+        <input type="checkbox" id="updates" name="updates" value="yes">
+        <br><br>
+
+       <label for="age">Age:</label>
+<select id="age" name="age">
+    <option value="under-18">Under 18</option>
+    <option value="18-64">18-64</option>
+    <option value="65-plus">65+</option>
+</select>
+        <br><br>
+
       <label for="questionfield">Question:</label>
       <input type="text" id="questionfield" name="question" placeholder="a yes or no question">
       <br>
+      <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="30"></textarea>
+        <br><br>
       <input type="submit">
     </form>
     <div id="fortune"></div>
