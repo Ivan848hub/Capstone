@@ -45,45 +45,90 @@ const scenes = {
 
   MainHall: {
     title: "Location: Main Hall",
-    character: "Interviewee:Neighbor",
+    img: "//add image",
     text: "well what I remember...",
     choices: [
       {
-        text: "Ask about the dog",
-        nextScene: "backyard"
+        text: "Ask the Tycoon",
+        nextScene: "ballroom"
       },
          {
-        text: "Ask about the neighbor",
-        nextScene: "hallway"
-      }
-    ]
-  },
-
-  hallway: {
-    title: "The Hallway",
-    text: "The hallway is dark and silent.",
-    choices: [
-      {
-        text: "backyard",
-        nextScene: "lockedDoor"
-      }
-    ]
-  },
-
-   lockedDoor: {
-    title: "The Locked Door",
-    text: "The door handle doesn't move.",
-    choices: [
-      {
-        text: "Try to open it",
-        action: unlockDoor
+        text: "Ask the mistress",
+        nextScene: "libary"
       },
       {
-        text: "Go back",
-        nextScene: "backyard"
+        text: "Go upstairs",
+        nextScene: "stairs"
+      },
+      { text: "Search the room", // fix this so there's a pop up
+     
+
       }
     ]
   },
+
+  ballroom: {
+    title: "The Ballroom",
+    img: "//add image",
+    text: "The ballroom is grand and elegant...",
+    choices: [
+      {
+        text: "Go to dinning room",
+        nextScene: "dinningRoom"
+      },
+      {
+        text: "Go back to main hall",
+        nextScene: "MainHall"
+      },
+      { text: "Search the room"
+        
+      }
+    ]
+  },
+
+   libary: {
+    title: "The Library",
+    img: "//add image",
+    text: "The library is filled with old books.",
+    choices: [
+      {
+        text: "Go to study",
+        nextScene: "study"
+      },
+      {
+        text: "Go back to main hall",
+        nextScene: "MainHall"
+      },
+      {
+        text: "Search the room"
+      }
+    ]
+  },
+
+  study: {
+    title: "The Study",
+    img: "//add image",
+    text: "The study is quiet and filled with books.",
+    choices: [
+      {
+        text: "go back to liabry",
+        nextScene: "libary"
+      },
+      {
+        text: "go to bastment",
+        nextScene: "bastment"
+      },
+      { 
+        text: "Search the room"
+      }
+    ]
+  },
+bastment: {
+    title: "The Bastment",
+    img: "//add image",
+    text: "You died",
+   
+  
 
    solution: {
     title: "The solution",
