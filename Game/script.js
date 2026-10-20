@@ -10,7 +10,7 @@
 // --------------------------------------------------
 
 // First, we create a variable for the current scene being displayed
-let currentScene = "backyard";
+let activeSceneName = "MainHall";
 
 // Then, we create an object that stores the data for each scene,
 const scenes = {
@@ -137,6 +137,7 @@ bastment: {
   }
 };
 
+
 // --------------------------------------------------
 // UPDATE SCENES
 // Read through the comments below to see what this section does
@@ -161,7 +162,7 @@ const characterName = document.getElementById("character-name");
 function updateScene(sceneName) {
 
   //This update the variable currentScene with the new scene passed as a parameter
-  currentScene = sceneName;
+  activeSceneName = sceneName;
 
   //This accesses the scene object based on the scene name
   const scene = scenes[sceneName];
@@ -196,7 +197,7 @@ function updateScene(sceneName) {
 }
 
 // This updates the screen with the current scene
-updateScene(currentScene);
+updateScene(activeSceneName);
 
 
 // --------------------------------------------------
