@@ -74,7 +74,7 @@ const scenes = {
     choices: [
       {
         text: "Go to dinning room",
-        nextScene: "dinningRoom"
+        nextScene: "diningRoom"
       },
       {
         text: "Go back to main hall",
@@ -123,17 +123,44 @@ const scenes = {
       }
     ]
   },
-bastment: {
+  stairs: {
+    title: "The Stairs",
+    text: "A staircase leads to the upper floor.",
+    choices: [
+      {
+        text: "Go to the study",
+        nextScene: "study"
+      },
+      {
+        text: "Return to the main hall",
+        nextScene: "MainHall"
+      }
+    ]
+  },
+  diningRoom: {
+    title: "The Dining Room",
+    text: "The dining room is set for a grand dinner.",
+    choices: [
+      {
+        text: "Return to the ballroom",
+        nextScene: "ballroom"
+      },
+      {
+        text: "Go to the main hall",
+        nextScene: "MainHall"
+      }
+    ]
+  },
+  bastment: {
     title: "The Bastment",
     img: "//add image",
     text: "You died",
-   
-  
-
-   solution: {
+    choices: []
+  },
+  solution: {
     title: "The solution",
     text: "You solved the mystery!",
-    
+    choices: []
   }
 };
 
@@ -166,18 +193,21 @@ function updateScene(sceneName) {
 
   //This accesses the scene object based on the scene name
   const scene = scenes[sceneName];
+  if (!scene) {
+    throw new Error(`Unknown scene: ${sceneName}`);
+  }
 
   // Here, for each html element, you change the textContent to match
   // the appropriate text from the scene object
   sceneTitle.textContent = scene.title;
   sceneText.textContent = scene.text;
-  characterName.textContent = scene.character;
+  characterName.textContent = scene.character || "";
 
   // Clear the old buttons before creating new ones
   choicesContainer.innerHTML = "";
 
   // Loop through each choice in the scene, connecting an action and nextScene if included
-  scene.choices.forEach(function (choice) {
+  (scene.choices || []).forEach(function (choice) {
     const button = document.createElement("button");
 
     button.textContent = choice.text;

@@ -4,9 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Play Mansion Mystery</title>
     <script src="script.js" defer></script>
-
+    <style>
+        #choices-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 1rem 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -35,10 +42,6 @@
     </section>
 
     <section>
-        <div id="choices-container"> </div>
-    </section>   
-        
-    <section>
         <p> Current HP:</p>
         <ul>
             <li id="health-display"> 100</li>
@@ -52,18 +55,7 @@
         <p id="message-display"></p>
     </section>
 
-<section>
-<h1>Intro</h1>
-    <p>
-        A murder just happened, you have till midnight to solve the case. Amoung the party guest is the culpurit it's your job to discover who did it. 
-        The guest are spreadout throughout the entire mansion, interrogate as much as you can find new leads and evidence but be careful since some leads are meant to misguide u 
-    </p>
-    <img src="mansion.jpeg" alt="Mansion">
-    <section aria-label="Status">
-        <h2>Status</h2>
-        <p>Time = hour 1</p>
-        <p>Sanity = 100%</p>
-</section>
+    <nav id="choices-container" aria-label="Scene choices"></nav>
     </main>
     <footer>
 
