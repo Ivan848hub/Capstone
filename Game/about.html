@@ -4,23 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color:rgb(58, 147, 255) ;">
+<body class="about-page">
+    <header class="about-header">
+        <h1>About Me</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">Play the game</a></li>
+                <li><a href="about.html" aria-current="page">About the creator</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1 style="text-align: center; font-family: 'Lucida Console', 'Lucida Sans Typewriter', monospace;">
-        About Me
-    </h1>
-    <img src="me.jpeg" alt="My Photo">
-    <p 
-        INTRO: Hello, I'm so done with everything!
-    </p>
-    <h3><strong>Favorites</strong></h3>
-    <ul> 
-      <li>Sleeping</li>
-      <li>Ignoring my problems</li>
-      <li>Doom Scrolling</li>
-    </ul>
-    <h3>Career Goals:</h3>
-    <p>Never ask me this question!!!</p>
+    <main>
+        <section class="about-section card" aria-labelledby="intro-heading">
+            <h2 id="intro-heading">Introduction</h2>
+            <img class="about-photo" src="me.jpeg" alt="Photo of the creator">
+            <p>Hello, I'm so done with everything!</p>
+        </section>
+
+        <section class="about-section card" aria-labelledby="favorites-heading">
+            <h2 id="favorites-heading">Favorites</h2>
+            <ul>
+                <li>Sleeping</li>
+                <li>Ignoring my problems</li>
+                <li>Doom Scrolling</li>
+            </ul>
+        </section>
+
+        <section class="about-section card" aria-labelledby="goals-heading">
+            <h2 id="goals-heading">Career Goals</h2>
+            <p>Never ask me this question!!!</p>
+        </section>
+    </main>
 </body>
 </html>
