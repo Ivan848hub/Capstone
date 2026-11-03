@@ -1,0 +1,26 @@
+.card{
+    text-align: center;
+    background-color: white;
+    width:400px;
+    height: 200px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+.header{
+
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin:20px;
+    text-align: center;
+}
+
+.button{
+  
+
+   background-color: yellow;
+    border: 2px solid black;
+    margin: 30px;
+    border-radius: 5px;
+   
+}
